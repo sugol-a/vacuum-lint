@@ -19,6 +19,8 @@ runs:
       uses: actions/setup-node@v4
     - name: 'Install vacuum'
       run: npm install -g @quobix/vacuum
+      shell: bash
     - name: 'Lint schema'
       run: vacuum lint -d ${{ inputs.schema-file }}
       working-directory: ${{ inputs.working-directory }}
+      shell: bash
