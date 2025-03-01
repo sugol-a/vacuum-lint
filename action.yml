@@ -1,0 +1,16 @@
+name: 'vacuum lint'
+description: 'Lint OpenAPI schema using vacuum'
+inputs:
+  schema-file:
+    description: 'Schema file'
+    required: true
+    default: 'schema.yaml'
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Setup node'
+      uses: actions/setup-node@v4
+    - name: 'Install vacuum'
+      run: npm install -g @quobix/vacuum
+    - name: 'Lint schema'
+      run: vacuum lint ${{ inputs.schema-file }}
