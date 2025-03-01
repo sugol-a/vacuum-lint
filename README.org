@@ -1,0 +1,14 @@
+* vacuum-lint
+
+GitHub action for linting OpenAPI schemas.
+
+Example usage:
+#+begin_src yaml
+jobs:
+  lint:
+    - name: Lint schema
+      uses: sugol-a/vacuum-lint@v1
+      with:
+        schema-file: myschema.yaml   # defaults to schema.yaml
+        working-directory: schema/   # defaults to the current working dir
+#+end_src
