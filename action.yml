@@ -5,6 +5,10 @@ inputs:
     description: 'Schema file'
     required: true
     default: 'schema.yaml'
+  working-directory:
+    description: 'Working directory'
+    required: false
+    default: '.'
 runs:
   using: 'composite'
   steps:
@@ -14,3 +18,4 @@ runs:
       run: npm install -g @quobix/vacuum
     - name: 'Lint schema'
       run: vacuum lint ${{ inputs.schema-file }}
+      working-directory: ${{ inputs.working-directory }}
