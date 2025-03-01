@@ -1,6 +1,6 @@
 * vacuum-lint
 
-GitHub action for linting OpenAPI schemas.
+GitHub action for linting OpenAPI schemas using [[https://github.com/daveshanley/vacuum][vacuum]].
 
 Example usage:
 #+begin_src yaml
