@@ -1,5 +1,7 @@
 name: 'vacuum lint'
 description: 'Lint OpenAPI schema using vacuum'
+icon: check-circle
+color: blue
 inputs:
   schema-file:
     description: 'Schema file'
